@@ -2,9 +2,10 @@ import os
 from telegram import Update
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes
 
-TOKEN = "9279782162:AAETLGkf4LUmSzqRgH8jPjrXl8BxoqbtJRk"
+TOKEN = os.getenv("TOKEN")
+
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text("أهلاً فيك! أنا بوتك شغال ✅\nارسل أي رسالة وأنا برد عليك.")
+    await update.message.reply_text("أهلاً، أنا شغال ✅")
 
 async def reply(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(f"وصلتني رسالتك: {update.message.text}")
