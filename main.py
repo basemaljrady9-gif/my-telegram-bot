@@ -5,7 +5,7 @@ from telegram.ext import Application, CommandHandler, MessageHandler, filters, C
 TOKEN = os.getenv("TOKEN")
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text("أهلاً، أنا شغال ✅")
+    await update.message.reply_text("أهلاً فيك! أنا شغال ✅")
 
 async def reply(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(f"وصلتني رسالتك: {update.message.text}")
